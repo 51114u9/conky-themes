@@ -1,5 +1,5 @@
-Slackware Conky Google Now Dark Style
-=====================================
+
+# Slackware Conky Google Now Dark Style
 
 ![screenshot](https://github.com/51114u9/conky-themes/raw/master/slackware-conky-google-now-dark/screenshot.jpg)
 
@@ -21,7 +21,7 @@ This style shows a semi-transparent panel to the right of the screen with the fo
 
 Optimized for 1600x900 screen geometry, but can be adjusted by changing the settings `gap_x` using the formula:
 
- `gap_x = display_width - 255px`
+`gap_x = display_width - 255px`
 
 Enable the extension `Composite` in X11 and the `Composer` in your desktop (XFCE, KDE, etc.)
 
