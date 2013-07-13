@@ -72,7 +72,7 @@ ${goto 55}${font Open Sans Light:size=50}${if_match ${desktop}==1}${color2}${end
 # system date
 ${goto 35}${font Open Sans Light:size=20}${color2}${time %a %d %b %Y}${color}${font}${voffset 10}
 # gnu/linux distro
-${font Open Sans Light:size=17}${color4}${exec cat /etc/slackware-version | cut -d " " -f 1} ${sysname} ${exec cat /etc/slackware-version | cut -d " " -f 2 | cut -d . -f 1-2}${color}${font}
+${font Open Sans Light:size=17}${color4}${exec grep "^ID=" /etc/os-release | sed -e "s/^ID=\(.*\)$/\1/g" | sed -r "s/\b(.)/\U\1/g"} ${sysname} ${exec grep "^VERSION_ID=" /etc/os-release | sed -e "s/^VERSION_ID=\(.*\)$/\1/g"}${color}${font}
 # kernel version & arch
 ${goto 65}${color4}v. ${kernel}${color}  on  ${color4}${machine} bits${color}
 
