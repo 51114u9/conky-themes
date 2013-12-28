@@ -2,7 +2,7 @@
 
 # Conky settings #
 background no
-update_interval 1
+update_interval 2
 double_buffer yes
 no_buffers yes
 
@@ -20,8 +20,8 @@ maximum_width 230
 
 # Alignment #
 alignment top_left
-gap_x 1345
-gap_y 25
+gap_x 1346
+gap_y 24
 
 border_inner_margin 15
 border_outer_margin 0
@@ -50,7 +50,7 @@ color3 8F5902 # chocolate
 color4 4E9A06 # chamemelon
 color5 204A87 # skyblue
 color6 5C3566 # Plum
-color7 A40000 # scarlet red
+color7 CC0000 # scarlet red
 color8 BABDB6 # aluminium
 color9 A23436 # oil
 
@@ -101,4 +101,5 @@ ${if_up eth0}Wired:
 ${tab}${tab}Download: ${color4}${downspeed eth0}${color}${alignr}Upload: ${color4}${upspeed eth0}${color}
 ${tab}${tab}Public IP:${alignr}${color4}${execi 3600 wget -q -O /dev/stdout http://checkip.dyndns.org/ | cut -d : -f 2- | cut -d \< -f -1 | sed 's/^ *//g'}${color}
 ${tab}${tab}Local  IP:${alignr}${color4}${addr eth0}${color}${endif}
-${voffset -70}
+${if_up wlan0}${else}${if_up eth0}${else}${voffset -20}${color7}Network Unavailable!${tab}${tab}:(${color}${voffset 20}${endif}${endif}
+${voffset -92}

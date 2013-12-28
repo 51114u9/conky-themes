@@ -7,7 +7,7 @@ This style shows a semi-transparent panel to the right of the screen with the fo
 
 - Weather based on ["conky google now"](http://satya164.deviantart.com/art/Conky-Google-Now-366545753) but optimized
 - Indicator of the number of desktops and the current desktop
-- Name of the distribution, OS and version
+- Name of the distribution, OS and version (vía /etc/os-release)
 - Kernel version and computer architecture
 - User name and hostname of the computer
 - How long the system has been running (uptime)
@@ -15,13 +15,11 @@ This style shows a semi-transparent panel to the right of the screen with the fo
 - Partition ROOT/DATA: capacity used-total and percentage used
 - Battery percentage remaining and AC adapter status
 - CPU: total usage percentage and temperature (all cores)
-- For each kernel: speed used in Ghz and percentage
+- For each core: speed used in Ghz and percentage used
 - Chart of CPU usage
 - Information of the wireless/wired network card
 
-Optimized for 1600x900 screen geometry, but can be adjusted by changing the settings `gap_x` using the formula:
-
-`gap_x = display_width - 255px`
+Optimized for 1600x900 screen geometry, but can be adjusted by changing the settings `gap_x` using the formula `gap_x = display_width - 254`
 
 Enable the extension `Composite` in X11 and the `Composer` in your desktop (XFCE, KDE, etc.)
 
