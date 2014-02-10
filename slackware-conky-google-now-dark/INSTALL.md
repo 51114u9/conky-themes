@@ -15,13 +15,17 @@
 
   `# upgradepkg --install-new /tmp/opensans-*.t?z`
 
+  Note: --cleanup delete temp files
+
 2. Install **conky requirements** if you don't have it
 
   Slackware:
 
-  `# sbokpkg -i "scons lua imlib2 tolua++ conky"`
+  `# sbopkg -i "scons lua imlib2 tolua++ conky"`
 
-3. Extract contents of the archive into your home folder
+3. Visit https://github.com/51114u9/conky-themes and download zip file
+
+4. Extract contents of the archive into your home folder
 
   `$ unzip conky-theme-master.zip`
 
@@ -33,7 +37,7 @@
 
   `$ cp -R .config ~/`
 
-4. Open the config file `.conkyrc` with your favorite text editor and:
+5. Open the config file `.conkyrc` with your favorite text editor and:
 
   Find `gap_x` and replace it with your own display width. Follow this formula: `gap_x = display_width - 254`
 
@@ -41,7 +45,7 @@
 
   Find *System info** section and customize with your own file system layout
 
-5. Add "Conky" to your **Startup Applications**:
+6. Add "Conky" to your **Startup Applications**:
 
   XFCE:
 
@@ -53,6 +57,6 @@
     >
     >**Command**: `sleep 5 && conky -d`
 
-6. Enjoy!
+7. Enjoy!
 
 B^)
